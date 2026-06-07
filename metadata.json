@@ -1,0 +1,6 @@
+{
+  "name": "مكتب الفرقان لتحفيظ القرآن",
+  "description": "الموقع الرسمي لمكتب الفرقان لتحفيظ القرآن الكريم بكفر الباجور - نتائج وتسميع وتقارير ومحتويات دعوية متميزة للمجتمع والحفظة وأولياء الأمور.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

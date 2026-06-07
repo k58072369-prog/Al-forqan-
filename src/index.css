@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", system-ui, -apple-system, sans-serif;
+  --font-serif: "Amiri", Georgia, serif;
+  
+  --color-emerald-50: #f0fdf4;
+  --color-emerald-100: #dcfce7;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+  
+  --color-gold-50: #fbfbf4;
+  --color-gold-100: #f5f4dc;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #bfa02c;
+  --color-gold-700: #9e8125;
+  --color-gold-800: #7e641c;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #faf9f6; /* Warm elegant eggshell background */
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* Print utility for parent reports and results */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
