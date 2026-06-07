@@ -114,20 +114,21 @@ export default function App() {
           
           {/* Logo Brand Footer block */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <div 
-                className="w-12 h-12 rounded-full bg-white/10 p-1 border border-amber-400 cursor-pointer select-none"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-950 p-2 border-2 border-amber-400 cursor-pointer select-none shadow-lg relative overflow-hidden transition-all hover:scale-105"
                 onDoubleClick={() => {
                   setActiveTab("admin");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 title="اضغط هنا مرتين متتاليتين لتسجيل الدخول للإدارة"
               >
-                <img src="/src/assets/logo.png" alt="الفرقان" className="w-full h-full object-contain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-400/10 to-transparent"></div>
+                <img src="/src/assets/logo.png" alt="الفرقان" className="w-full h-full object-contain relative z-10" />
               </div>
               <div>
-                <h3 className="font-serif text-lg font-black text-amber-300">مكتب الفرقان</h3>
-                <p className="text-[10px] text-emerald-200">لتحفيظ القرآن الكريم وتدريس أحكام التجويد</p>
+                <h3 className="font-serif text-lg sm:text-xl font-black text-amber-300">مكتب الفرقان</h3>
+                <p className="text-[10px] sm:text-xs text-emerald-200 font-sans">الصرح القرآني المتكامل لتحفيظ القرآن والتجويد</p>
               </div>
             </div>
             

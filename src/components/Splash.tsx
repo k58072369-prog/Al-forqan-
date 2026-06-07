@@ -35,32 +35,33 @@ export default function Splash({ onComplete }: SplashProps) {
           <div className="text-center px-4 max-w-md">
             {/* Spinning Golden Logo Halo */}
             <motion.div
-              className="relative mx-auto mb-8 w-32 h-32 flex items-center justify-center"
+              className="relative mx-auto mb-8 w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               {/* Outer Golden Glow */}
-              <div className="absolute inset-0 rounded-full bg-amber-500/10 blur-xl animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full bg-amber-500/15 blur-2xl animate-pulse"></div>
               
               {/* Spinning Ring */}
               <motion.div
-                className="absolute inset-0 rounded-full border-3 border-dashed border-amber-400"
+                className="absolute inset-0 rounded-full border-4 border-dashed border-amber-400"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
 
               {/* Inner Circle / Logo File */}
               <motion.div
-                className="w-24 h-24 rounded-full bg-emerald-900 border border-amber-500/50 flex items-center justify-center overflow-hidden shadow-2xl p-2"
-                initial={{ rotate: -15 }}
-                animate={{ rotate: 0 }}
-                transition={{ duration: 1.2 }}
+                className="w-30 h-30 sm:w-36 sm:h-36 rounded-full bg-emerald-950 border-2 border-amber-400 flex items-center justify-center overflow-hidden shadow-2xl p-2 relative"
+                initial={{ rotate: -15, scale: 0.9 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{ duration: 1.2, ease: "backOut" }}
               >
+                <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/10 to-transparent pointer-events-none"></div>
                 <img
                   src="/src/assets/logo.png"
                   alt="مكتب الفرقان"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain relative z-10"
                   onError={(e) => {
                     // Fallback to simple icon if image fails
                     e.currentTarget.style.display = "none";

@@ -70,7 +70,7 @@ export default function Reports() {
       {/* HEADER OVERVIEW */}
       <div className="text-center space-y-3 max-w-2xl mx-auto no-print">
         <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-950">
-          تقارير المتابعة الدورية لولي الأمر
+          تقارير المتابعة الدورية للطلاب
         </h2>
         <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-sans">
           منصة إشراك أولياء الأمور لتتبع معدلات التزام الأبناء، ونطاق حفظهم وتلاوتهم، ونقاط قوتهم وثغراتهم التربوية شهراً بشهر بالتفصيل الموثق.
@@ -427,7 +427,7 @@ export default function Reports() {
 
               {/* Scorecard signature footer */}
               <div className="pt-8 mt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-sans gap-4">
-                <span>المشرف الفني الكفء: فضيلة الشيخ عبد الله الديب</span>
+                <span>المشرف الفني الكفء: فضيلة الشيخ سامح رشاد</span>
                 <span>* مكتب الفرقان لتحفيظ القرآن الكريم بالمنوفية</span>
                 <span>تاريخ طباعة الكارت: {new Date().toLocaleDateString("ar-EG")}</span>
               </div>

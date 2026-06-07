@@ -56,9 +56,10 @@ export default function Home({ onNavigate }: HomeProps) {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full border border-amber-400 mx-auto flex items-center justify-center p-2 mb-2"
+            className="w-28 h-28 sm:w-36 sm:h-36 bg-emerald-950/40 backdrop-blur-md rounded-full border-2 border-amber-400 mx-auto flex items-center justify-center p-3 sm:p-4 mb-4 shadow-xl relative"
           >
-            <img src="/src/assets/logo.png" alt="مكتب الفرقان" className="w-full h-full object-contain" />
+            <div className="absolute inset-0 rounded-full border border-dashed border-amber-300/30 animate-spin" style={{ animationDuration: '40s' }}></div>
+            <img src="/src/assets/logo.png" alt="مكتب الفرقان" className="w-full h-full object-contain relative z-10 filter drop-shadow-md" />
           </motion.div>
 
           {websiteContent.announcement && (
@@ -104,7 +105,7 @@ export default function Home({ onNavigate }: HomeProps) {
               className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-6 py-3 rounded-2xl active:scale-95 transition-all text-sm sm:text-base"
             >
               <FileText className="w-5 h-5 text-amber-400" />
-              <span>تقارير ولي الأمر</span>
+              <span>تقارير الطلاب</span>
             </button>
           </div>
         </div>
@@ -214,7 +215,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="relative w-44 h-44 rounded-2xl border-4 border-amber-400 bg-emerald-50 overflow-hidden mx-auto shadow-md">
               <img
                 src="/src/assets/sheikh.jpg"
-                alt="الشيخ عبد الله الديب"
+                alt="الشيخ سامح رشاد"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   // Fallback
@@ -224,7 +225,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
             
             <div className="space-y-1">
-              <h5 className="font-sans text-base font-extrabold text-emerald-900">فضيلة الشيخ عبد الله الديب</h5>
+              <h5 className="font-sans text-base font-extrabold text-emerald-900">فضيلة الشيخ سامح رشاد</h5>
               <p className="text-xs text-amber-600 font-bold">المشرف العام ومعلم القراءات بالمقر</p>
             </div>
             

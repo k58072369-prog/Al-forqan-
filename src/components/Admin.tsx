@@ -86,7 +86,7 @@ export default function Admin({ isAdminLoggedIn, setIsAdminLoggedIn }: AdminProp
     name: "",
     parentName: "",
     parentPhone: "",
-    teacherName: "الشيخ عبد الله الديب",
+    teacherName: "الشيخ سامح رشاد",
     groupName: "حلقة الفجر المتميزة",
   });
 
@@ -456,7 +456,7 @@ export default function Admin({ isAdminLoggedIn, setIsAdminLoggedIn }: AdminProp
       if (res.ok) {
         setShowStudentModal(false);
         setEditingStudent(null);
-        setStudentForm({ code: "", name: "", parentName: "", parentPhone: "", teacherName: "الشيخ عبد الله الديب", groupName: "حلقة الفجر المتميزة" });
+        setStudentForm({ code: "", name: "", parentName: "", parentPhone: "", teacherName: "الشيخ سامح رشاد", groupName: "حلقة الفجر المتميزة" });
         fetchAllData();
         alert("تم حفظ بيانات الطالب بنجاح!");
       } else {
@@ -1091,7 +1091,7 @@ export default function Admin({ isAdminLoggedIn, setIsAdminLoggedIn }: AdminProp
             <button
               onClick={() => {
                 setEditingStudent(null);
-                setStudentForm({ code: "", name: "", parentName: "", parentPhone: "", teacherName: "الشيخ عبد الله الديب", groupName: "حلقة الفجر المتميزة" });
+                setStudentForm({ code: "", name: "", parentName: "", parentPhone: "", teacherName: "الشيخ سامح رشاد", groupName: "حلقة الفجر المتميزة" });
                 setShowStudentModal(true);
               }}
               className="px-4 py-2.5 bg-emerald-800 hover:bg-emerald-900 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 cursor-pointer w-full sm:w-auto justify-center"
@@ -2000,7 +2000,7 @@ export default function Admin({ isAdminLoggedIn, setIsAdminLoggedIn }: AdminProp
                     type="text"
                     value={studentForm.teacherName}
                     onChange={(e) => setStudentForm({ ...studentForm, teacherName: e.target.value })}
-                    placeholder="الشيخ عبد الله الديب"
+                    placeholder="الشيخ سامح رشاد"
                     className="w-full text-right bg-gray-50 border border-gray-200 rounded-xl p-3 outline-none focus:border-emerald-500"
                   />
                 </div>

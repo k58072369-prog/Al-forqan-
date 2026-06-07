@@ -143,7 +143,7 @@ export default function Results() {
 
                 <div className="text-center md:text-left text-xs bg-emerald-50 border border-emerald-100 rounded-2xl px-5 py-2">
                   <div className="font-semibold text-emerald-900">المشرف العام م. كفر الباجور</div>
-                  <div className="text-[11px] font-sans text-gray-500 font-bold mt-0.5">فضيلة الشيخ عبد الله الديب</div>
+                  <div className="text-[11px] font-sans text-gray-500 font-bold mt-0.5">فضيلة الشيخ سامح رشاد</div>
                 </div>
               </div>
 
@@ -377,7 +377,7 @@ export default function Results() {
 
               {/* Dignified Footer of certificate block */}
               <div className="pt-8 mt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-sans gap-4">
-                <span>توقيع لجنة التحكيم: الشيخ عبد الله الديب وعصبة المحفظين</span>
+                <span>توقيع لجنة التحكيم: الشيخ سامح رشاد وعصبة المحفظين</span>
                 <span>* شهادة معتمدة رقمياً وتخضع لبنود كفر الباجور للقرآن</span>
                 <span>تاريخ تسليم الشهادة: {res.competitionDate}</span>
               </div>
