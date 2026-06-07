@@ -142,8 +142,8 @@ export default function Reports() {
               {/* Top Title Banner */}
               <div className="border-b-2 border-emerald-900/10 pb-6 mb-8 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full border border-amber-400 bg-emerald-50 flex items-center justify-center p-1.5 shadow-xs shrink-0">
-                    <img src="/src/assets/logo.png" alt="" className="w-full h-full object-contain" />
+                  <div className="w-14 h-14 rounded-full border border-amber-400 bg-emerald-950 flex items-center justify-center p-1.5 shadow-xs shrink-0">
+                    <FileText className="w-7 h-7 text-amber-400" />
                   </div>
                   <div>
                     <h1 className="font-serif text-lg sm:text-2xl font-black text-emerald-900 inline-flex items-center gap-1">

@@ -4,6 +4,7 @@
  */
 
 import { useState, useEffect } from "react";
+import { BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface SplashProps {
@@ -50,23 +51,15 @@ export default function Splash({ onComplete }: SplashProps) {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
 
-              {/* Inner Circle / Logo File */}
+              {/* Inner Circle / Gold Book */}
               <motion.div
                 className="w-30 h-30 sm:w-36 sm:h-36 rounded-full bg-emerald-950 border-2 border-amber-400 flex items-center justify-center overflow-hidden shadow-2xl p-2 relative"
                 initial={{ rotate: -15, scale: 0.9 }}
                 animate={{ rotate: 0, scale: 1 }}
                 transition={{ duration: 1.2, ease: "backOut" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/10 to-transparent pointer-events-none"></div>
-                <img
-                  src="/src/assets/logo.png"
-                  alt="مكتب الفرقان"
-                  className="w-full h-full object-contain relative z-10"
-                  onError={(e) => {
-                    // Fallback to simple icon if image fails
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/15 to-transparent pointer-events-none"></div>
+                <BookOpen className="w-14 h-14 sm:w-16 sm:h-16 text-amber-400 relative z-10 filter drop-shadow-md" />
               </motion.div>
             </motion.div>
 

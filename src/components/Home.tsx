@@ -59,7 +59,7 @@ export default function Home({ onNavigate }: HomeProps) {
             className="w-28 h-28 sm:w-36 sm:h-36 bg-emerald-950/40 backdrop-blur-md rounded-full border-2 border-amber-400 mx-auto flex items-center justify-center p-3 sm:p-4 mb-4 shadow-xl relative"
           >
             <div className="absolute inset-0 rounded-full border border-dashed border-amber-300/30 animate-spin" style={{ animationDuration: '40s' }}></div>
-            <img src="/src/assets/logo.png" alt="مكتب الفرقان" className="w-full h-full object-contain relative z-10 filter drop-shadow-md" />
+            <BookOpen className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400 relative z-10 filter drop-shadow-md" />
           </motion.div>
 
           {websiteContent.announcement && (
@@ -270,7 +270,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   ) : (
                     <div className="absolute inset-0 bg-linear-to-b from-emerald-800 to-emerald-950 flex flex-col items-center justify-center p-4 text-center">
                       <div className="w-10 h-10 rounded-full border border-amber-400/30 flex items-center justify-center mb-2">
-                        <img src="/src/assets/logo.png" alt="" className="w-6 h-6 object-contain opacity-50" />
+                        <BookOpen className="w-5 h-5 text-amber-400 opacity-60" />
                       </div>
                       <span className="text-[10px] text-amber-400 font-bold tracking-wider">الفرقان للأخبار</span>
                     </div>
@@ -380,7 +380,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <img src={selectedNews.image} alt={selectedNews.title} className="w-full h-full object-cover" />
               ) : (
                 <div className="absolute inset-0 bg-linear-to-b from-emerald-800 to-emerald-950 flex flex-col items-center justify-center p-4">
-                  <img src="/src/assets/logo.png" alt="" className="w-16 h-16 object-contain opacity-40 mb-3" />
+                  <BookOpen className="w-16 h-16 text-amber-400 opacity-40 mb-3" />
                   <span className="text-xs text-amber-400 font-bold tracking-widest">أخبار مكتب الفرقان الرسمي</span>
                 </div>
               )}

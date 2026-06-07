@@ -12,7 +12,7 @@ import Library from "./components/Library";
 import Results from "./components/Results";
 import Reports from "./components/Reports";
 import Admin from "./components/Admin";
-import { MessageSquare, PhoneCall, Heart, Navigation } from "lucide-react";
+import { MessageSquare, PhoneCall, Heart, Navigation, BookOpen } from "lucide-react";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -116,7 +116,7 @@ export default function App() {
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <div 
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-950 p-2 border-2 border-amber-400 cursor-pointer select-none shadow-lg relative overflow-hidden transition-all hover:scale-105"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-950 p-2 border-2 border-amber-400 cursor-pointer select-none shadow-lg relative overflow-hidden transition-all hover:scale-105 flex items-center justify-center"
                 onDoubleClick={() => {
                   setActiveTab("admin");
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -124,7 +124,7 @@ export default function App() {
                 title="اضغط هنا مرتين متتاليتين لتسجيل الدخول للإدارة"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-400/10 to-transparent"></div>
-                <img src="/src/assets/logo.png" alt="الفرقان" className="w-full h-full object-contain relative z-10" />
+                <BookOpen className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 relative z-10" />
               </div>
               <div>
                 <h3 className="font-serif text-lg sm:text-xl font-black text-amber-300">مكتب الفرقان</h3>

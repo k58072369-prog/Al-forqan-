@@ -128,8 +128,8 @@ export default function Results() {
               {/* Scorecard Header Block */}
               <div className="border-b-2 border-emerald-900/10 pb-6 mb-8 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full border-2 border-amber-400 bg-emerald-50 flex items-center justify-center p-1.5 shadow-xs shrink-0">
-                    <img src="/src/assets/logo.png" alt="" className="w-full h-full object-contain" />
+                  <div className="w-16 h-16 rounded-full border-2 border-amber-400 bg-emerald-950 flex items-center justify-center p-1.5 shadow-sm shrink-0">
+                    <Award className="w-8 h-8 text-amber-400" />
                   </div>
                   <div className="text-right md:text-right">
                     <h1 className="font-serif text-xl sm:text-2xl font-black text-emerald-900 leading-normal">

@@ -21,7 +21,7 @@ export default function Header({ currentTab, setCurrentTab, isAdminLoggedIn }: H
     { id: "reports", label: "تقارير الطلاب", icon: FileText },
     { id: "library", label: "المكتبة والإنتاجات", icon: BookOpen },
     { id: "news", label: "أخبار المكتب", icon: Newspaper },
-    ...(isAdminLoggedIn ? [{ id: "admin", label: "لوحة التحكم", icon: ShieldAlert }] : []),
+    { id: "admin", label: isAdminLoggedIn ? "لوحة التحكم" : "دخول الإدارة", icon: ShieldAlert },
   ];
 
   const handleNavClick = (tabId: string) => {
@@ -36,16 +36,9 @@ export default function Header({ currentTab, setCurrentTab, isAdminLoggedIn }: H
         <div className="flex justify-between items-center h-20">
           {/* Brand Logo and Title */}
           <div className="flex items-center gap-4 cursor-pointer group" onClick={() => handleNavClick("home")}>
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-amber-400 bg-emerald-950/5 flex items-center justify-center overflow-hidden p-1.5 shadow-md relative transition-transform duration-300 group-hover:scale-105">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-amber-400 bg-emerald-950 flex items-center justify-center overflow-hidden p-1.5 shadow-md relative transition-transform duration-300 group-hover:scale-105">
               <div className="absolute inset-0 bg-linear-to-b from-amber-400/10 to-transparent pointer-events-none"></div>
-              <img
-                src="/src/assets/logo.png"
-                alt="الفرقان"
-                className="w-full h-full object-contain relative z-10 filter drop-shadow-sm"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
+              <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 relative z-10 filter drop-shadow-sm" />
             </div>
             <div className="flex flex-col select-none">
               <h1 className="font-serif text-xl sm:text-2xl font-black text-emerald-800 leading-tight group-hover:text-emerald-900 transition-colors">

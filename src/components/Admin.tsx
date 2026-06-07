@@ -878,64 +878,77 @@ export default function Admin({ isAdminLoggedIn, setIsAdminLoggedIn }: AdminProp
   // ---------------------------------------------------------------------------
   if (!isAuthenticated) {
     return (
-      <div className="max-w-md mx-auto py-16 animate-in fade-in duration-300">
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xl space-y-6">
-          <div className="w-14 h-14 bg-emerald-50 text-emerald-800 border-2 border-amber-400 rounded-full flex items-center justify-center mx-auto shadow-sm">
-            <Lock className="w-6 h-6 text-amber-500" />
+      <div className="max-w-lg mx-auto py-12 px-4 animate-in fade-in zoom-in-95 duration-500">
+        <div className="bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 rounded-[2.5rem] p-8 sm:p-10 border-2 border-amber-400 shadow-2xl space-y-8 relative overflow-hidden text-white">
+          <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] z-0"></div>
+          
+          <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-500 text-emerald-950 rounded-2xl flex items-center justify-center mx-auto shadow-lg border-2 border-white/20 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+            <Lock className="w-8 h-8 font-black" />
           </div>
           
-          <div className="space-y-1 text-center">
-            <h2 className="font-serif text-xl sm:text-2xl font-black text-emerald-950">
-              تسجيل دخول الإدارة والمحفظين
+          <div className="space-y-2 text-center relative z-10">
+            <h2 className="font-serif text-2xl sm:text-3xl font-black text-amber-300 tracking-wide drop-shadow-sm">
+              بوابة الإدارة والتوجيه
             </h2>
-            <p className="text-xs text-gray-500 leading-relaxed font-sans">
-              لوحة تحكم خاصة لشيوخ الحلقات لتسجيل الطلاب وتعديل درجات الحفظ والمراجعة الأسبوعية والشهرية.
+            <p className="text-xs text-emerald-100/85 leading-relaxed font-sans max-w-sm mx-auto">
+              لوحة التحكم الخاصة بمشرفي ومعلمي الحلقات لإدارة ملفات الطلاب وحفظ السجلات والتقارير الشهرية.
             </p>
           </div>
 
-          <form onSubmit={handleLogin} className="space-y-4 font-sans text-xs">
-            <div className="space-y-1.5 text-right">
-              <label className="font-bold text-emerald-950">اسم المستخدم المعتمد:</label>
+          <form onSubmit={handleLogin} className="space-y-5 font-sans text-xs relative z-10">
+            <div className="space-y-2 text-right">
+              <label className="font-bold text-amber-300/90 tracking-wide block">اسم المستخدم المعتمد:</label>
               <input
                 type="text"
                 required
-                placeholder="أدخل اسم المستخدم (مثال: admin)"
+                placeholder="أدخل اسم المستخدم الإداري"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="w-full text-right bg-gray-50 border outline-none border-gray-200 focus:border-emerald-500 focus:bg-white rounded-xl py-3 px-4 text-xs transition-all font-mono"
+                className="w-full text-right bg-emerald-950/80 text-white border outline-none border-emerald-800 focus:border-amber-400 focus:bg-emerald-900 rounded-2xl py-3.5 px-4 text-xs sm:text-sm transition-all font-mono"
               />
             </div>
 
-            <div className="space-y-1.5 text-right">
-              <label className="font-bold text-emerald-950">كلمة المرور السرية:</label>
+            <div className="space-y-2 text-right">
+              <label className="font-bold text-amber-300/90 tracking-wide block">كلمة المرور السرية:</label>
               <input
                 type="password"
                 required
-                placeholder="أدخل كلمة المرور"
+                placeholder="أدخل كلمة المرور السرية"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full text-right bg-gray-50 border outline-none border-gray-200 focus:border-emerald-500 focus:bg-white rounded-xl py-3 px-4 text-xs transition-all font-mono"
+                className="w-full text-right bg-emerald-950/80 text-white border outline-none border-emerald-800 focus:border-amber-400 focus:bg-emerald-900 rounded-2xl py-3.5 px-4 text-xs sm:text-sm transition-all font-mono"
               />
             </div>
 
-            <div className="p-3 bg-emerald-50/70 rounded-xl text-[11px] text-emerald-900 border border-emerald-100/60 text-center font-sans font-bold leading-relaxed space-y-0.5">
-               <div>حساب التجربة والدخول المعتمد للتقييم:</div>
-               <div className="text-emerald-850 dir-ltr text-center font-mono">
-                 اسم المستخدم: <span className="underline select-all text-amber-700">admin</span> | كلمة المرور: <span className="underline select-all text-amber-700">admin2026</span>
+            {/* Autofill Demo Credentials widget */}
+            <div className="p-4 bg-emerald-950/90 rounded-2xl text-[11px] text-emerald-250 border border-emerald-800 text-center font-sans font-bold leading-relaxed space-y-2.5">
+               <div className="text-amber-300 font-bold">حساب الإشراف المعتمد لتقييم المنصة:</div>
+               <div className="text-sm dir-ltr text-center font-mono text-gray-200">
+                 اسم المستخدم: <span className="underline select-all text-amber-400">admin</span> | كلمة المرور: <span className="underline select-all text-amber-400">admin2026</span>
                </div>
+               <button
+                 type="button"
+                 onClick={() => {
+                   setUsername("admin");
+                   setPassword("admin2026");
+                 }}
+                 className="mt-1 px-4 py-1.5 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black rounded-lg transition-colors cursor-pointer select-none text-[10px] w-full"
+               >
+                 ✨ اضغط زر التعبئة التلقائية لبيانات الدخول
+               </button>
             </div>
 
             {authError && (
-              <p className="text-xs text-red-600 font-sans font-bold leading-relaxed text-center p-2.5 bg-red-50 border border-red-100 rounded-xl">{authError}</p>
+              <p className="text-xs text-red-300 font-sans font-bold leading-relaxed text-center p-3 bg-red-950/60 border border-red-900/60 rounded-2xl">{authError}</p>
             )}
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-emerald-800 hover:bg-emerald-900 text-white font-bold rounded-2xl text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-emerald-950 font-black rounded-2xl text-xs sm:text-sm shadow-xl transition-all cursor-pointer flex items-center justify-center gap-2 transform active:scale-[0.98]"
             >
-              <ShieldAlert className="w-4 h-4 text-amber-400" />
-              <span>{loading ? "جاري التحقق والمزامنة..." : "التحقق والولوج بصفة مدير"}</span>
+              <ShieldAlert className="w-4 h-4 text-emerald-950" />
+              <span>{loading ? "جاري التدقيق وفتح الجلسة..." : "تسجيل الدخول الآمن للوحة"}</span>
             </button>
           </form>
         </div>
