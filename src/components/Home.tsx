@@ -211,22 +211,9 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="space-y-4 text-center w-full">
             <h4 className="font-serif text-lg font-bold text-emerald-950 border-b border-gray-100 pb-3">إدارة وإشراف المكتب</h4>
             
-            {/* Visual presentation of generated sheikh picture with border */}
-            <div className="relative w-44 h-44 rounded-2xl border-4 border-amber-400 bg-emerald-50 overflow-hidden mx-auto shadow-md">
-              <img
-                src="/src/assets/sheikh.jpg"
-                alt="الشيخ سامح رشاد"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-            </div>
-            
-            <div className="space-y-1">
+            <div className="space-y-1.5 py-2">
               <h5 className="font-sans text-base font-extrabold text-emerald-900">فضيلة الشيخ سامح رشاد</h5>
-              <p className="text-xs text-amber-600 font-bold">المشرف العام ومعلم القراءات بالمقر</p>
+              <p className="text-xs text-amber-600 font-bold bg-amber-50/70 inline-block px-3 py-1 rounded-full">المشرف العام ومعلم القراءات بالمقر</p>
             </div>
             
             <p className="text-xs text-gray-500 leading-relaxed font-sans px-2">
